@@ -3,7 +3,7 @@ version: '2'
 services:
 
   jenkins:
-    image: dagman62/jenkins-docker
+    image: jenkins-docker
     build: .
     ports:
       - "8080:8080"
