@@ -7,7 +7,7 @@ RUN wget https://updates.jenkins-ci.org/latest/jenkins.war && \
   mv /tmp/jenkins.war /usr/share/jenkins && \
   rm -f /tmp/jenkins.war 
 
-RUN ARCH=`arch` && \ 
+RUN ARCH=`uname -m` && \ 
  mkdir -p /tmp/download && \
  curl -L https://download.docker.com/linux/static/stable/${ARCH}/docker-18.03.1-ce.tgz | tar -xz -C /tmp/download && \
  rm -rf /tmp/download/docker/dockerd && \
